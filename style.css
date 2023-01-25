@@ -1,0 +1,174 @@
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+html, body {
+    height: 100%;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    background-color: var(--Violet);
+    color: white;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 2.5rem;
+    padding-right: 3rem;
+    min-height: 100%;
+}
+
+header > img{
+    width: 155px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+    gap: 3rem;
+}
+
+.main-img > img {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem .3rem;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 6vw;
+}
+
+.description {
+    font-size: 4vw;
+}
+
+.content > a {
+    margin-top: 1rem;
+    background-color: white;
+    transition: background-color ease-in-out .4s, color ease-in-out .4s;
+    color: var(--Violet);
+    width: 200px;
+    padding: .75rem;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.content > a:is(:hover,:active) {
+    background-color: var(--Soft-Magenta);
+    color: white;
+    transition: background-color ease-in-out .4s, color ease-in-out .4s;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin: 0 2.5rem;
+    padding-bottom: 3rem;
+    gap: 1rem;
+}
+
+footer > * {
+    color: white;
+    transition: color ease-in-out .4s , border ease-in-out .4s;
+    padding: .6rem;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+footer > :first-child {
+    padding-left: .8rem;
+    padding-right: .8rem;
+}
+
+footer > *:is(:hover,:active) {
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+    transition: color ease-in-out .4s , border ease-in-out .4s;
+}
+
+@media (min-width: 1000px) {
+
+    body {
+        background-image: url("./images/bg-desktop.svg");
+        background-position: center;
+        background-size: contain;
+        padding: 4rem;
+    }
+
+    main {
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        padding-top: 6rem;
+    }
+
+    .description {
+        font-size: 1.2rem;
+        padding-right: 4rem;
+    }
+
+    .title {
+        font-size: 2.6vw;
+        padding-right: 10rem;
+    }
+
+    .content {
+        justify-content: flex-start;
+        align-items: flex-start;
+        text-align: start;
+        margin: 0;
+    }
+
+    footer {
+        padding-bottom: 0;
+        justify-content: end;
+    }
+
+}
+
+
+
