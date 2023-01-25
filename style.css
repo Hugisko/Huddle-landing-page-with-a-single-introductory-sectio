@@ -126,6 +126,7 @@ footer > :first-child {
 }
 
 footer > *:is(:hover,:active) {
+    cursor: pointer;
     color: var(--Soft-Magenta);
     border-color: var(--Soft-Magenta);
     transition: color ease-in-out .4s , border ease-in-out .4s;
